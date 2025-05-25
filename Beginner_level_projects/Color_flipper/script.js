@@ -13,7 +13,8 @@ function getRandomRGBColor() {
 
     // console.log(bgColor);
     body.style.backgroundColor = bgColor;
-    colorValue.innerText = `rgb: ${bgColor}`
+    colorValue.innerText = bgColor
+    colorValue.style.color = bgColor
 }
 
 flipBtn.addEventListener("click", () => {
