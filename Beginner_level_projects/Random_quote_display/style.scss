@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    
+    header {
+        margin-bottom: 3rem;
+        text-align: center;
+        
+        h1 {
+            color: #BB86FC;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+        }
+    }
+}
+
+.quote-container {
+    background-color: #1e1e1e;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #333;
+    
+    &:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        transform: translateY(-5px);
+    }
+    
+    transition: all 0.3s ease;
+}
+
+.quote-content {
+    margin-bottom: 2rem;
+    position: relative;
+    
+    .fa-quote-left, .fa-quote-right {
+        font-size: 1.5rem;
+        color: #BB86FC;
+        opacity: 0.7;
+    }
+    
+    .fa-quote-left {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+    }
+    
+    .fa-quote-right {
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+    }
+    
+    .quote-text {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        color: #e0e0e0;
+        font-weight: 500;
+        margin: 1rem 0;
+        
+        &::selection {
+            background-color: #BB86FC;
+            color: #121212;
+        }
+    }
+}
+
+.quote-author {
+    margin-bottom: 2.5rem;
+    
+    p {
+        font-size: 1.2rem;
+        color: #aaa;
+        font-weight: 600;
+        font-style: italic;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .new-quote-btn {
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        border: none;
+        background-color: #BB86FC;
+        color: #121212;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        min-width: 150px;
+        
+        &:hover {
+            background-color: #9d65df;
+            transform: scale(1.05);
+        }
+        
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+// Media queries for responsiveness
+@media screen and (max-width: 768px) {
+    .quote-container {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .quote-content .quote-text {
+        font-size: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .quote-container {
+        padding: 1.5rem;
+    }
+    
+    .quote-content .quote-text {
+        font-size: 1.2rem;
+    }
+    
+    header h1 {
+        font-size: 1.7rem;
+    }
+}
