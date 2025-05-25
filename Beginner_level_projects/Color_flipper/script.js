@@ -1,10 +1,21 @@
-// // Logic for generating random RGB colors
-// function getRandomRGBColor() {
-//     // Generate random values for R, G, and B (0-255)
-//     const r = Math.floor(Math.random() * 256);
-//     const g = Math.floor(Math.random() * 256);
-//     const b = Math.floor(Math.random() * 256);
+let flipBtn = document.querySelector("#flip-btn");
+let body = document.querySelector("body");
+let colorValue = document.querySelector(".color-value")
+
+// Logic for generating random RGB colors
+function getRandomRGBColor() {
+    // Generate random values for R, G, and B (0-255)
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
     
-//     // Return in the format "rgb(r, g, b)"
-//     return `rgb(${r}, ${g}, ${b})`;
-// }
+    const bgColor =  `rgb(${r}, ${g}, ${b})`;
+
+    // console.log(bgColor);
+    body.style.backgroundColor = bgColor;
+    colorValue.innerText = `rgb: ${bgColor}`
+}
+
+flipBtn.addEventListener("click", () => {
+    getRandomRGBColor();
+})
