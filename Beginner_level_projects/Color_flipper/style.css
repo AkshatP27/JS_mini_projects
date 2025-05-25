@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  background-color: #212121;
+}
+
+nav {
+  background-color: #121212;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .nav-center {
+  width: 90%;
+  max-width: 1170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .nav-center h3 {
+  color: #BB86FC;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+main {
+  height: calc(100% - 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container {
+  text-align: center;
+  background-color: rgba(18, 18, 18, 0.9);
+  padding: 2.5rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+}
+main .container h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #e0e0e0;
+}
+main .container h2 .color-value {
+  color: #BB86FC;
+  background-color: rgba(187, 134, 252, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: 700;
+}
+main .container .btn {
+  background-color: transparent;
+  border: 2px solid #BB86FC;
+  color: #BB86FC;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+main .container .btn:hover {
+  background-color: #BB86FC;
+  color: #121212;
+}
+main .container .btn:active {
+  transform: scale(0.97);
+}
+
+@media screen and (max-width: 768px) {
+  .container h2 {
+    font-size: 1.5rem;
+  }
+  .container {
+    width: 90%;
+    padding: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
