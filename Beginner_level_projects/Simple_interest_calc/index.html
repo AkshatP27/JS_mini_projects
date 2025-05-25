@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator | AK27</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Simple Interest Calculator</h1>
+            
+            <div class="input-group">
+                <label for="principal">Principal Amount</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-rupee-sign"></i>
+                    <input type="number" id="principal" placeholder="Enter principal amount">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="rate">Interest Rate (%)</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-percent"></i>
+                    <input type="number" id="rate" placeholder="Enter interest rate">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="time">Time Period (years)</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-calendar"></i>
+                    <input type="number" id="time" placeholder="Enter time period">
+                </div>
+            </div>
+            
+            <button id="calculate-btn">Calculate Interest</button>
+            
+            <div class="result">
+                <div class="formula">
+                    <p>Formula: Simple Interest = (P × R × T) / 100</p>
+                </div>
+                
+                <div class="result-box">
+                    <div class="result-item">
+                        <span class="result-label">Simple Interest:</span>
+                        <span class="result-value" id="interest-result">₹0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Total Amount:</span>
+                        <span class="result-value" id="total-result">₹0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
