@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'General Sans Medium', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #eee;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.counter-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.counter-display {
+    margin-bottom: 2rem;
+    
+    #counter {
+        font-size: 6rem;
+        font-weight: bold;
+        color: #4ecca3;
+        text-shadow: 0 0 10px rgba(78, 204, 163, 0.5);
+    }
+}
+
+.counter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    
+    .btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background-color: #4ecca3;
+        color: #222;
+        font-size: 1.8rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.3s;
+        
+        &:hover {
+            background-color: #3aa889;
+            transform: scale(1.05);
+        }
+        
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+    
+    .reset-btn {
+        width: auto;
+        padding: 0 1.5rem;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        background-color: #ff9f68;
+        
+        &:hover {
+            background-color: #ff8848;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-display {
+        #counter {
+            font-size: 4rem;
+        }
+    }
+    
+    .counter-controls {
+        .btn {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+        }
+    }
+}
